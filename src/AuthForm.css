@@ -1,0 +1,107 @@
+/* Form Container */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Glass effect */
+    text-align: center;
+}
+
+/* Form Styling */
+.auth-form h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.auth-button {
+    padding: 8px 16px; /* Adjust padding for smaller size */
+    font-size: 14px; /* Smaller font size */
+    width: auto; /* Prevent it from stretching */
+    display: inline-block; /* Shrink to content */
+    text-align: center; /* Center-align the text */
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer; /* Pointer cursor for button */
+}
+
+    .auth-button:hover {
+        background-color: #0056b3; /* Darker background on hover */
+    }
+
+
+/* Toggle Text */
+.toggle-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 15px;
+}
+
+.toggle-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.toggle-text a:hover {
+    text-decoration: underline;
+}
+.fb-login-button {
+    background-color: #4267B2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+    .fb-login-button:hover {
+        background-color: #365899;
+    }
+
+.welcome-message {
+    text-align: center;
+}
+
+    .welcome-message img {
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+

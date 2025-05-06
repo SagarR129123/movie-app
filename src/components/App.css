@@ -1,0 +1,304 @@
+/* General App Styles */
+.app {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+    header h1 {
+        font-size: 1.8rem;
+        color: #fff;
+    }
+
+    header button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        header button:hover {
+            background-color: #0056b3;
+        }
+
+/* Movie List and Search Results Styling */
+.movie-list, .search-result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .movie-list h2, .search-result h2 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #007bff;
+    }
+
+.results-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.result-item, .movie-item {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden; /* Prevent content from spilling out */
+}
+
+    .result-item:hover, .movie-item:hover {
+        transform: translateY(-10px) scale(1.05); /* Pop-out effect */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+        background-color: var(--card-hover-bg); /* Optional: change background on hover */
+    }
+
+.movie-poster {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto; /* Center the poster */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+    object-fit: cover; /* Ensure the image fits within its container */
+}
+
+.result-item:hover .movie-poster,
+.movie-item:hover .movie-poster {
+    transform: scale(1.1); /* Slight zoom-in on the poster */
+}
+
+
+.watch-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+    .watch-button:hover {
+        background-color: #218838;
+    }
+
+.not-available {
+    font-size: 0.9rem;
+    color: red;
+    font-style: italic;
+}
+
+/* Movie Details Styling */
+.movie-details-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.movie-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.movie-poster {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.movie-overview {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.movie-info {
+    margin-top: 20px;
+}
+
+    .movie-info p {
+        font-size: 1.1em;
+        margin: 10px 0;
+    }
+
+.youtube-trailer, .youtube-full-movie {
+    margin-top: 30px;
+    text-align: center;
+}
+
+    .youtube-trailer h3, .youtube-full-movie h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .movie-item, .result-item {
+        width: 150px;
+    }
+
+    .movie-title {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-item, .result-item {
+        width: 120px;
+    }
+
+    .movie-title {
+        font-size: 0.8rem;
+    }
+    /* App.css */
+    .app-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: var(--header-bg);
+        color: var(--header-text);
+    }
+
+    .theme-toggle-button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        transition: background-color 0.3s;
+    }
+
+        .theme-toggle-button:hover {
+            background-color: var(--button-hover-bg);
+        }
+    /* General App Styles */
+    .app {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Gradient background */
+        color: #333;
+        padding: 20px;
+        box-sizing: border-box;
+        min-height: 100vh; /* Ensure the app covers the full viewport */
+        background-size: cover; /* Adjust background sizing */
+        background-attachment: fixed; /* Keep background fixed during scrolling */
+    }
+
+    /* Subtle Texture Pattern */
+    body {
+        background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png'); /* Subtle floral pattern */
+        background-size: 150px 150px;
+        background-blend-mode: multiply; /* Blend with gradient */
+    }
+
+    /* Movie List and Search Results Styling */
+    .movie-list, .search-result {
+        background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+        backdrop-filter: blur(5px); /* Glassmorphism effect */
+    }
+
+    /* Header Background */
+    header {
+        background: linear-gradient(90deg, #333, #555);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Animated Background */
+    @keyframes gradientBackground {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .app {
+        background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #8fd3f4);
+        background-size: 400% 400%;
+        animation: gradientBackground 10s ease infinite; /* Smooth animated gradient */
+    }
+    .app-logo {
+        width: 150px; /* Adjust width */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Add spacing next to text */
+        vertical-align: middle; /* Align with text */
+        border-radius: 8px; /* Optional: rounded corners */
+    }
+
+
+}

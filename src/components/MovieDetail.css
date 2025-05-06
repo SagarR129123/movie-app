@@ -1,0 +1,182 @@
+/* Movie Details Styling */
+.movie-details-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Movie Poster Styling */
+.movie-poster {
+    max-width: 200px; /* Adjust the width to match other pages */
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto; /* Center the poster horizontally */
+    display: block; /* Ensure it's block-level to center it properly */
+    margin-bottom: 20px;
+}
+
+
+.movie-overview {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.movie-info {
+    margin-top: 20px;
+}
+
+    .movie-info p {
+        font-size: 1rem;
+        color: #666;
+        margin: 10px 0;
+    }
+
+.watch-now-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    text-align: center;
+}
+
+    .watch-now-button:hover {
+        background-color: #218838;
+    }
+
+.youtube-trailer, .youtube-full-movie {
+    margin-top: 30px;
+    text-align: center;
+}
+
+    .youtube-trailer h3, .youtube-full-movie h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+/* Loading spinner styling */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .movie-title {
+        font-size: 1.5rem;
+    }
+
+    .movie-info p {
+        font-size: 0.9rem;
+    }
+
+    .movie-overview {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-title {
+        font-size: 1.2rem;
+    }
+
+    .movie-info p {
+        font-size: 0.8rem;
+    }
+
+    .movie-overview {
+        font-size: 0.8rem;
+    }
+
+    .language-selector {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .language-selector {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+        .language-selector label {
+            font-size: 1.1em;
+            margin-right: 10px;
+            color: #fff;
+        }
+
+        .language-selector select {
+            padding: 8px 15px;
+            font-size: 1em;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    .language-selector {
+        margin-top: 20px;
+        text-align: center;
+        color: #fff;
+    }
+
+        .language-selector label {
+            font-size: 1.1em;
+            margin-right: 10px;
+        }
+
+        .language-selector select {
+            padding: 8px 15px;
+            font-size: 1em;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    .player-wrapper {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    .react-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+}
